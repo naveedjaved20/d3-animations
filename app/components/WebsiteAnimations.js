@@ -21,6 +21,24 @@ import PartnersSection from './website-animations/PartnersSection'
 import ProcessSection from './website-animations/ProcessSection'
 import NewsletterSection from './website-animations/NewsletterSection'
 import StatsSection from './website-animations/StatsSection'
+import AgileFlow from './website-animations/AgileFlow'
+import DevOpsPipeline from './website-animations/DevOpsPipeline'
+import DesignThinking from './website-animations/DesignThinking'
+import KanbanBoard from './website-animations/KanbanBoard'
+import WaterfallMethod from './website-animations/WaterfallMethod'
+import LeanStartup from './website-animations/LeanStartup'
+import LoadingAnimation from './website-animations/LoadingAnimation'
+import InteractiveMap from './website-animations/InteractiveMap'
+import ImageGallery from './website-animations/ImageGallery'
+import ComparisonTable from './website-animations/ComparisonTable'
+import Calculator from './website-animations/Calculator'
+import InteractiveTabs from './website-animations/InteractiveTabs'
+import ToastNotification from './website-animations/ToastNotification'
+import ParallaxScroll from './website-animations/ParallaxScroll'
+import SearchAutocomplete from './website-animations/SearchAutocomplete'
+import AnimatedLogo from './website-animations/AnimatedLogo'
+import CookieConsent from './website-animations/CookieConsent'
+import InteractiveGlobe from './website-animations/InteractiveGlobe'
 
 const tabs = [
   { id: 'page-transitions', label: 'Page Transitions', component: PageTransitions },
@@ -43,6 +61,24 @@ const tabs = [
   { id: 'process-section', label: 'Process Section', component: ProcessSection },
   { id: 'newsletter-section', label: 'Newsletter Section', component: NewsletterSection },
   { id: 'stats-section', label: 'Stats Section', component: StatsSection },
+  { id: 'agile-flow', label: 'Agile Flow', component: AgileFlow },
+  { id: 'devops-pipeline', label: 'DevOps Pipeline', component: DevOpsPipeline },
+  { id: 'design-thinking', label: 'Design Thinking', component: DesignThinking },
+  { id: 'kanban-board', label: 'Kanban Board', component: KanbanBoard },
+  { id: 'waterfall-method', label: 'Waterfall Method', component: WaterfallMethod },
+  { id: 'lean-startup', label: 'Lean Startup', component: LeanStartup },
+  { id: 'loading-animation', label: 'Loading Animation', component: LoadingAnimation },
+  { id: 'interactive-map', label: 'Interactive Map', component: InteractiveMap },
+  { id: 'image-gallery', label: 'Image Gallery', component: ImageGallery },
+  { id: 'comparison-table', label: 'Comparison Table', component: ComparisonTable },
+  { id: 'calculator', label: 'Calculator', component: Calculator },
+  { id: 'interactive-tabs', label: 'Interactive Tabs', component: InteractiveTabs },
+  { id: 'toast-notification', label: 'Toast Notification', component: ToastNotification },
+  { id: 'parallax-scroll', label: 'Parallax Scroll', component: ParallaxScroll },
+  { id: 'search-autocomplete', label: 'Search Autocomplete', component: SearchAutocomplete },
+  { id: 'animated-logo', label: 'Animated Logo', component: AnimatedLogo },
+  { id: 'cookie-consent', label: 'Cookie Consent', component: CookieConsent },
+  { id: 'interactive-globe', label: 'Interactive Globe', component: InteractiveGlobe },
 ]
 
 export default function WebsiteAnimations() {
