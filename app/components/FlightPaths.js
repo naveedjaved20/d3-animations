@@ -126,45 +126,44 @@ export default function FlightPaths() {
         .attr('stroke', '#fff')
         .attr('stroke-width', 2)
 
+      // Create recursive animation function
+      const animatePlane = function(planeElement) {
+        planeElement
+          .transition()
+          .duration(2000)
+          .attrTween('transform', function() {
+            const pathNode = pathElement.node()
+            const pathLength = pathNode.getTotalLength()
+            return function(t) {
+              const point = pathNode.getPointAtLength(t * pathLength)
+              return `translate(${point.x}, ${point.y})`
+            }
+          })
+          .on('end', function() {
+            d3.select(this).remove()
+            // Restart animation
+            setTimeout(() => {
+              const newPlane = svg
+                .append('circle')
+                .attr('cx', from.x)
+                .attr('cy', from.y)
+                .attr('r', 6)
+                .attr('fill', flight.color)
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 2)
+
+              animatePlane(newPlane)
+            }, 500)
+          })
+      }
+
       plane
         .transition()
         .duration(2000)
         .delay(1500 + i * 300)
         .attr('r', 6)
-        .attrTween('transform', function() {
-          const pathNode = pathElement.node()
-          const pathLength = pathNode.getTotalLength()
-          return function(t) {
-            const point = pathNode.getPointAtLength(t * pathLength)
-            return `translate(${point.x}, ${point.y})`
-          }
-        })
         .on('end', function() {
-          d3.select(this).remove()
-          // Restart animation
-          setTimeout(() => {
-            const newPlane = svg
-              .append('circle')
-              .attr('cx', from.x)
-              .attr('cy', from.y)
-              .attr('r', 6)
-              .attr('fill', flight.color)
-              .attr('stroke', '#fff')
-              .attr('stroke-width', 2)
-
-            newPlane
-              .transition()
-              .duration(2000)
-              .attrTween('transform', function() {
-                const pathNode = pathElement.node()
-                const pathLength = pathNode.getTotalLength()
-                return function(t) {
-                  const point = pathNode.getPointAtLength(t * pathLength)
-                  return `translate(${point.x}, ${point.y})`
-                }
-              })
-              .on('end', arguments.callee)
-          }, 500)
+          animatePlane(d3.select(this))
         })
     })
   }, [])

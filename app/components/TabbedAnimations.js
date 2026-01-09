@@ -45,6 +45,15 @@ import ConstellationEffect from "./ConstellationEffect";
 import AnimatedWaves from "./AnimatedWaves";
 import MagneticParticles from "./MagneticParticles";
 import FlightPaths from "./FlightPaths";
+import LiquidMorph from "./website-animations/LiquidMorph";
+import NeuralNetwork from "./website-animations/NeuralNetwork";
+import ParticleExplosion from "./website-animations/ParticleExplosion";
+import DNAHelix from "./website-animations/DNAHelix";
+import InteractiveGalaxy from "./website-animations/InteractiveGalaxy";
+import MorphingText from "./website-animations/MorphingText";
+import LightRefraction from "./website-animations/LightRefraction";
+import MagneticField from "./website-animations/MagneticField";
+import FractalTree from "./website-animations/FractalTree";
 
 const tabs = [
   { id: "human-design", label: "Human Design", component: HumanDesignChart },
@@ -95,6 +104,15 @@ const tabs = [
   { id: "animated-waves", label: "Animated Waves", component: AnimatedWaves },
   { id: "magnetic-particles", label: "Magnetic Particles", component: MagneticParticles },
   { id: "flight-paths", label: "Flight Paths", component: FlightPaths },
+  { id: "liquid-morph", label: "Liquid Morph", component: LiquidMorph },
+  { id: "neural-network", label: "Neural Network", component: NeuralNetwork },
+  { id: "particle-explosion", label: "Particle Explosion", component: ParticleExplosion },
+  { id: "dna-helix", label: "DNA Helix", component: DNAHelix },
+  { id: "interactive-galaxy", label: "Interactive Galaxy", component: InteractiveGalaxy },
+  { id: "morphing-text", label: "Morphing Text", component: MorphingText },
+  { id: "light-refraction", label: "Light Refraction", component: LightRefraction },
+  { id: "magnetic-field", label: "Magnetic Field", component: MagneticField },
+  { id: "fractal-tree", label: "Fractal Tree", component: FractalTree },
 ];
 
 export default function TabbedAnimations() {

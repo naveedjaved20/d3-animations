@@ -1,9 +1,9 @@
 'use client'
 
-import TabbedAnimations from './components/TabbedAnimations'
+import WebsiteAnimations from '../components/WebsiteAnimations'
 import Link from 'next/link'
 
-export default function Home() {
+export default function WebsiteAnimationsPage() {
   return (
     <main style={{ 
       display: 'flex', 
@@ -16,11 +16,11 @@ export default function Home() {
       <div style={{
         position: 'absolute',
         top: '20px',
-        right: '20px',
+        left: '20px',
         zIndex: 1000
       }}>
         <Link 
-          href="/website-animations"
+          href="/"
           style={{
             padding: '12px 24px',
             background: 'rgba(255, 255, 255, 0.9)',
@@ -40,10 +40,10 @@ export default function Home() {
             e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)'
           }}
         >
-          Website Animations →
+          ← Data Visualizations
         </Link>
       </div>
-      <TabbedAnimations />
+      <WebsiteAnimations />
     </main>
   )
 }
